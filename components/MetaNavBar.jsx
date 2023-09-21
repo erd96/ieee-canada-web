@@ -18,4 +18,3 @@ const MetaNavBar = () => {
 
 export default MetaNavBar
 
-{/* <Image src="/assets/images/ieee_logo.png" width={68} height={10}/ */}

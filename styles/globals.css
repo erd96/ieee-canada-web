@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
-:root {
-    
+main {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    background: theme(colors[ieee-red]);
 }
+
