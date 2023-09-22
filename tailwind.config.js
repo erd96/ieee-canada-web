@@ -10,6 +10,15 @@ module.exports = {
       colors: {
         'ieee-red' : '#BA0C2F'
       },
+      keyframes: {
+        dropdown: {
+          '0%': {marginTop:'-15rem'},
+          '100%' : {marginTop: '0rem'}
+        }
+      },
+      animation: {
+        dropdown: 'dropdown 1s ease-in-out'
+      }
     },
   },
   plugins: [],
