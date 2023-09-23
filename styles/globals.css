@@ -8,10 +8,16 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-main {
+body{
     display: flex;
-    flex-direction: column;
     height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    /* display: flex;
+    flex-direction: column; */
+    flex-grow: 1;
     padding-left: 10vw;
     padding-right: 10vw;
     background: theme(colors[ieee-red]);
