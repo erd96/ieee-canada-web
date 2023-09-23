@@ -1,7 +1,9 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 import {Logo, SearchIcon} from "public/assets/icons/icons.js"
-import { useState } from "react"
+import ieeeCA from "public/assets/images/ieee-ca.png"
+import { useEffect, useState } from "react"
 
 
 
@@ -14,21 +16,28 @@ const NavBar = () => {
         switch(dropdown){
             case "about": 
                 return (<>
-                <h1 className=" animate-[fadeIn_0.5s_ease-in-out] mt-6">About</h1> 
-                <Link className=" animate-[fadeIn_0.6s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
-                <Link className=" animate-[fadeIn_0.7s_ease-in-out]  flex flex-col"  href="/">Administration</Link >
-                <Link className=" animate-[fadeIn_0.8s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
-                <Link className=" animate-[fadeIn_0.9s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link>
+                <h1 className="text-3xl animate-[fadeIn_0.5s_ease-in-out] my-3">About</h1> 
+                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.6s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
+                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.7s_ease-in-out]  flex flex-col"  href="/">Administration</Link >
+                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.8s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
+                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.9s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link>
                 </>)
             case "activities":
+                return (<>
+                    <h1 className="text-3xl animate-[fadeIn_0.5s_ease-in-out] my-3">Activities</h1> 
+                    <Link className="text-base my-[0.1rem] animate-[fadeIn_0.6s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
+                    <Link className="text-base my-[0.1rem] animate-[fadeIn_0.7s_ease-in-out]  flex flex-col"  href="/">Administration</Link >
+                    <Link className="text-base my-[0.1rem] animate-[fadeIn_0.8s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
+                    <Link className="text-base my-[0.1rem] animate-[fadeIn_0.9s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link>
+                    </>)
             case "volunteers":   
         }
     }
 
     return (
         <div onMouseLeave={() => setDropdown("")} className="flex flex-col">
-            <div className="flex justify-between bg-white h-10 items-center px-32 py-7">
-                <Link href="/"> <Logo /></Link>
+            <div className="flex justify-between  bg-slate-100 h-10 items-center px-32 py-7">
+                <Link href="/"><Image src={ieeeCA} height={40}/></Link>
                 <div className="flex color-black gap-x-5">
                     <Link id="about" onMouseEnter={(e) => setDropdown(e.target.id)} href="">About</Link>
                     <Link id="activities" onMouseEnter={(e) => setDropdown(e.target.id)} href="">Activities</Link>
@@ -40,7 +49,7 @@ const NavBar = () => {
                 <div id="search"><SearchIcon height="h-[100%]"/></div>
             </div>
             {/* <NavDropDown selection={dropdown}/> */}
-            <div id="nav_dropdown" className={`hidden_nav flex flex-col px-32  bg-blue-900 ${dropdown && "slide"}`}>
+            <div id="nav_dropdown" className={`hidden_nav flex flex-col px-32   bg-slate-100 ${dropdown && "slide"}`}>
                 {dropdown && renderDropDown()}
             </div>
         </div>
