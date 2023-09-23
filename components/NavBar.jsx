@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import {Logo, SearchIcon} from "public/assets/icons/icons.js"
 import ieeeCA from "public/assets/images/ieee-ca.png"
-import { useEffect, useState } from "react"
+import {useState } from "react"
 
 
 
@@ -11,6 +11,7 @@ import { useEffect, useState } from "react"
 
 const NavBar = () => {
     const [dropdown, setDropdown] = useState("");
+
 
     function renderDropDown(){
         switch(dropdown){
@@ -35,8 +36,8 @@ const NavBar = () => {
     }
 
     return (
-        <div onMouseLeave={() => setDropdown("")} className="flex flex-col">
-            <div className="flex justify-between  bg-slate-100 h-10 items-center px-32 py-7">
+        <div id="navbar"  onMouseLeave={() => setDropdown("")} className={`flex flex-col ${dropdown && 'blur_bg'}`} active>
+            <div className="flex justify-between  bg-slate-100 h-10 items-center px-32 py-7 ">
                 <Link href="/"><Image src={ieeeCA} height={40}/></Link>
                 <div className="flex color-black gap-x-5">
                     <Link id="about" onMouseEnter={(e) => setDropdown(e.target.id)} href="">About</Link>

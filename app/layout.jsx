@@ -11,10 +11,8 @@ const RootLayout = ({children}) => {
   return (
     <html lang="en">
     <body>
-        <header>
           <MetaNavBar/>
           <NavBar/>
-        </header>
         <main className="app">
             {children}
         </main>

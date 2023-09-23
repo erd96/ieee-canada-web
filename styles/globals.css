@@ -6,17 +6,32 @@
 
 :root {
     font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
 }
 
 main {
     /* filter: blur(2px); */
+    display: flex;
+    height: 100vh;
     padding-left: 8rem;
     padding-right: 8rem;
     background: theme(colors[ieee-red]);
+    -webkit-transition:filter linear 0.4s;
+    -moz-transition: filter linear 0.4s;
+    -ms-transition: filter linear 0.4s;
+    -o-transition: filter linear 0.4s;
+    transition: filter linear 0.4s;
 }
 
+#navbar.blur_bg + main.app{
+    filter: blur(2px) brightness(0.5);
+    -webkit-transition:filter linear 0.4s;
+    -moz-transition: filter linear 0.4s;
+    -ms-transition: filter linear 0.4s;
+    -o-transition: filter linear 0.4s;
+    transition: filter linear 0.4s;
+}
 
 .testclass {
     animation: test 1s ease-in-out;
