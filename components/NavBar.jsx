@@ -36,7 +36,7 @@ const NavBar = () => {
     }
 
     return (
-        <div id="navbar"  onMouseLeave={() => setDropdown("")} className={` ${dropdown && 'blur_bg'}`} active>
+        <nav id="navbar"  onMouseLeave={() => setDropdown("")} className={` ${dropdown && 'blur_bg'}`}>
             <div className="flex justify-between  bg-slate-100 h-10 items-center px-[10vw] py-7 ">
                 <Link href="/"><Image src={ieeeCA} height={40}/></Link>
                 <div className="flex color-black gap-x-5">
@@ -52,7 +52,7 @@ const NavBar = () => {
             <div id="nav_dropdown" className={`hidden_nav flex flex-col px-[10vw]   bg-slate-100 ${dropdown && "slide"}`}>
                 {dropdown && renderDropDown()}
             </div>
-        </div>
+        </nav>
     )
 }
 
