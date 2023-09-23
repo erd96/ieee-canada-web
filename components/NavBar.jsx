@@ -18,10 +18,10 @@ const NavBar = () => {
             case "about": 
                 return (<>
                 <h1 className="text-3xl animate-[fadeIn_0.5s_ease-in-out] my-3">About</h1> 
-                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.6s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
-                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.7s_ease-in-out]  flex flex-col"  href="/">Administration</Link >
-                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.8s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
-                <Link className="text-base mb-[0.1rem] animate-[fadeIn_0.9s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link>
+                <Link className="text-base my-[0.1rem] animate-[fadeIn_0.6s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
+                <Link className="text-base my-[0.1rem] animate-[fadeIn_0.7s_ease-in-out]  flex flex-col"  href="/">Administration</Link >
+                <Link className="text-base my-[0.1rem] animate-[fadeIn_0.8s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link >
+                <Link className="text-base my-[0.1rem] animate-[fadeIn_0.9s_ease-in-out]  flex flex-col"  href="/">IEEE Canada Policies</Link>
                 </>)
             case "activities":
                 return (<>
@@ -37,7 +37,7 @@ const NavBar = () => {
 
     return (
         <div id="navbar"  onMouseLeave={() => setDropdown("")} className={`flex flex-col ${dropdown && 'blur_bg'}`} active>
-            <div className="flex justify-between  bg-slate-100 h-10 items-center px-32 py-7 ">
+            <div className="flex justify-between  bg-slate-100 h-10 items-center px-[10vw] py-7 ">
                 <Link href="/"><Image src={ieeeCA} height={40}/></Link>
                 <div className="flex color-black gap-x-5">
                     <Link id="about" onMouseEnter={(e) => setDropdown(e.target.id)} href="">About</Link>
@@ -47,10 +47,9 @@ const NavBar = () => {
                     <Link href="https://site.ieee.org/r7-sac/">Student Acitivities</Link>
                     <Link href="https://r7.ieee.org/yp/">Young Professionals</Link>
                 </div>
-                <div id="search"><SearchIcon height="h-[100%]"/></div>
+                <div id="search"><SearchIcon height="h-[50%]"/></div>
             </div>
-            {/* <NavDropDown selection={dropdown}/> */}
-            <div id="nav_dropdown" className={`hidden_nav flex flex-col px-32   bg-slate-100 ${dropdown && "slide"}`}>
+            <div id="nav_dropdown" className={`hidden_nav flex flex-col px-[10vw]   bg-slate-100 ${dropdown && "slide"}`}>
                 {dropdown && renderDropDown()}
             </div>
         </div>

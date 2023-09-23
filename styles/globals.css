@@ -6,36 +6,31 @@
 
 :root {
     font-family: 'Open Sans', sans-serif;
-    /* display: flex;
-    flex-direction: column; */
 }
 
 main {
-    /* filter: blur(2px); */
     display: flex;
+    flex-direction: column;
     height: 100vh;
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 10vw;
+    padding-right: 10vw;
     background: theme(colors[ieee-red]);
-    -webkit-transition:filter linear 0.4s;
-    -moz-transition: filter linear 0.4s;
-    -ms-transition: filter linear 0.4s;
-    -o-transition: filter linear 0.4s;
-    transition: filter linear 0.4s;
+    -webkit-transition:filter linear 500ms;
+    -moz-transition: filter linear 500ms;
+    -ms-transition: filter linear 500ms;
+    -o-transition: filter linear 500ms;
+    transition: filter linear 500ms;
 }
 
 #navbar.blur_bg + main.app{
     filter: blur(2px) brightness(0.5);
-    -webkit-transition:filter linear 0.4s;
-    -moz-transition: filter linear 0.4s;
-    -ms-transition: filter linear 0.4s;
-    -o-transition: filter linear 0.4s;
-    transition: filter linear 0.4s;
+    -webkit-transition:filter linear 500ms;
+    -moz-transition: filter linear 500ms;
+    -ms-transition: filter linear 500ms;
+    -o-transition: filter linear 500ms;
+    transition: filter linear 500ms;
 }
 
-.testclass {
-    animation: test 1s ease-in-out;
-}
 
 .hidden_nav {
     height:0rem;

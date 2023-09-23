@@ -1,6 +1,7 @@
 import '@styles/globals.css'
 import MetaNavBar from '@components/MetaNavBar'
 import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
 export const metadata = {
     title: "IEEE Canada",
@@ -16,6 +17,7 @@ const RootLayout = ({children}) => {
         <main className="app">
             {children}
         </main>
+        <Footer/>
     </body>
     </html>
   )
