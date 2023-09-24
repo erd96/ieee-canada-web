@@ -36,10 +36,12 @@ const NavBar = () => {
     }
 
     return (
-        <nav id="navbar"  onMouseLeave={() => setDropdown("")} className={` ${dropdown && 'blur_bg'}`}>
-            <div className="flex justify-between  bg-slate-100 h-10 items-center px-[10vw] py-7 ">
+        <nav id="navbar"  onMouseLeave={() => setDropdown("")} className={`${dropdown && 'blur_bg'}`}>
+
+            {/* Desktop & Tablet Navigation */}
+            <div className="md:flex hidden justify-between  bg-slate-100 h-10 items-center md:px-[2vw] lg:px-[10vw] py-7 ">
                 <Link href="/"><Image src={ieeeCA} height={40}/></Link>
-                <div className="flex color-black gap-x-5">
+                <div className="flex md:text-xs lg:text-sm color-black gap-x-[1vw]">
                     <Link id="about" onMouseEnter={(e) => setDropdown(e.target.id)} href="">About</Link>
                     <Link id="activities" onMouseEnter={(e) => setDropdown(e.target.id)} href="">Activities</Link>
                     <Link id="volunteers" onMouseEnter={(e) => setDropdown(e.target.id)} href="">Volunteers</Link>
@@ -49,6 +51,14 @@ const NavBar = () => {
                 </div>
                 <div id="search"><SearchIcon height="h-[50%]"/></div>
             </div>
+
+            {/* Mobile Navigation */}
+            <div className="md:hidden flex justify-between  bg-slate-100 h-10 items-center md:px-[2vw] lg:px-[10vw] py-7 px-4">
+                <Link href="/"><Image src={ieeeCA} height={40}/></Link>
+                <div id="search"><SearchIcon height="h-[50%]"/></div>
+            </div>
+
+            
             <div id="nav_dropdown" className={`hidden_nav flex flex-col px-[10vw]   bg-slate-100 ${dropdown && "slide"}`}>
                 {dropdown && renderDropDown()}
             </div>
